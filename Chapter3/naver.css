@@ -1,0 +1,88 @@
+/* 선택자(selector) */
+
+*{
+ box-sizing : border-box;   
+}
+
+.blind{/*네이버 메인 페이지 참고*/
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+}
+
+#header-center{
+    margin: 0 auto;
+    width: 1130px;
+}
+
+#header-search a{
+    text-decoration: none;
+}
+
+#header-search h1{
+    width : 198px; /*가로 범위 확보*/
+    height: 48px;  /*세로 범위 확보*/
+    display : inline-block;
+    /* background-image: url('./sp_search.png'); */
+    /* background-position: -5px -10px; */
+    /* background-repeat: no-repeat; */
+    background: url(./sp_search.png) -4px -4px no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+    /* 
+    chrome 기본 (display : block) 으로 설정
+    가로 전체 margin을 사라지도록 하겠다.
+    (입력된 부분만 margin(구역)을 설정하고 있다.
+    */
+}
+
+#header-search > h1 span{
+    display: none;
+}
+
+#header-search h2{
+    display : none;
+}
+
+#header-search fieldset{
+    margin-left : 20px;
+    padding     : 12px  0   12px     10px;
+                 /* top right bottom left  */
+    border      : 2px solid #03cf5d; /*hex 표기법*/
+    width       : 520px;
+    height      : 49px;
+    display     : inline-block;
+   vertical-align: middle; 
+}
+
+#header-search fieldset input{
+    border  :   none;
+    padding :   0;
+}
+
+#header-search fieldset button{
+    width : 49px;
+    height : 49px;
+    border : none;
+    padding : 0;
+    background :#03cf5d;
+}
+
+#search-image{
+    background-image : url(./sp_search.png);
+    background-position : -4px -60px;
+    background-repeat: no-repeat;
+    width : 21px;
+    height : 21px;
+    display : inline-block;
+}
+
+/* 검색창 깜박거림 현상 제거 */
+#header-search > fieldset > input{
+    outline : none;
+}
+
